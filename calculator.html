@@ -9,6 +9,8 @@
 
 	<style>
 		#length, #width, #depth {margin-bottom:10px;}
+		#result h2 { margin: 30px 0 0 0;}
+		#result p {margin-top:5px;}
 	</style>
 
 	<!-- Internet Explorer HTML5 enabling script: -->
@@ -47,7 +49,7 @@
 				var cuft = sqft * depth_inches;
 				var cuyds = cuft/27;
 				
-				document.getElementById('volume').innerHTML = '<h2>Result</h2><p>Total volume = ' + Math.round(cuyds*100)/100 + ' cubic yards</p>';
+				document.getElementById('result').innerHTML = '<h2>Result</h2><p>Total volume = ' + Math.round(cuyds*100)/100 + ' cubic yards</p>';
 				
 			},true);
 		}
@@ -58,10 +60,15 @@
 
 </head>
 <body>
+<header>
+	<h1>Garden Mix Volume Calculator</h1>
+</header>
 
-<h1>Garden Mix Volume Calculator</h1>
+<section id="instructions">
 <p>Enter the length, width and depth of the bed you need to fill and press 'calculate' to find the volume of garden mix you need.</p>
+</section>
 
+<section id="calculator">
 <form>
 	<label for="length">Length (feet)</label><br />
 	<input type="text" name="length" id="length" /><br />
@@ -74,8 +81,10 @@
 
 	<input type="button" value="calculate" id="calc" />
 </form>
+</section>
 
-<div id="volume"></div>
+<section id="result">
+</section>
 
 </body>
 </html>
