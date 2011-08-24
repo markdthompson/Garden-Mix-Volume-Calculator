@@ -7,7 +7,9 @@
 
 	<title>HTML5 Garden Mix Calculator</title>
 
-	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<style>
+		#length, #width, #depth {margin-bottom:10px;}
+	</style>
 
 	<!-- Internet Explorer HTML5 enabling script: -->
 
@@ -39,18 +41,13 @@
 				// validate depth input
 				var depth = document.forms[0].depth.value;
 				
-				// validate price input
-				//var price = document.forms[0].price.value;
-				
-				// display result
-				// l * w = sq ft * d = cubic ft / 27 cu ft = cubic yards
+				// display result using this formula: l * w = sq ft * d = cubic ft / 27 cu ft = cubic yards
 				var sqft = len * width;
 				var depth_inches = depth / 12; //convert depth to inches by dividing by 12
 				var cuft = sqft * depth_inches;
 				var cuyds = cuft/27;
 				
 				document.getElementById('volume').innerHTML = '<h2>Result</h2><p>Total volume = ' + Math.round(cuyds*100)/100 + ' cubic yards</p>';
-				//document.getElementById('cost').innerHTML = 'Total cost = $' + Math.round(cuyds * price * 100)/100;
 				
 			},true);
 		}
@@ -62,30 +59,23 @@
 </head>
 <body>
 
-<h1>Garden Mix Calculator</h1>
+<h1>Garden Mix Volume Calculator</h1>
+<p>Enter the length, width and depth of the bed you need to fill and press 'calculate' to find the volume of garden mix you need.</p>
+
 <form>
-<label for="length">Length (feet)</label><br />
-<input type="text" name="length" id="length" /><br />
-<br />
+	<label for="length">Length (feet)</label><br />
+	<input type="text" name="length" id="length" /><br />
 
-<label for="width">Width (feet)</label><br />
-<input type="text" name="width" id="width" /><br />
-<br />
+	<label for="width">Width (feet)</label><br />
+	<input type="text" name="width" id="width" /><br />
 
-<label for="length">Depth (inches)</label><br />
-<input type="text" name="depth" id="depth" /><br />
-<br />
-<!--
-<label for="price">Price (per yard)</label><br />
-<input type="text" name="price" id="price" /><br />
-<br />
--->
-<input type="button" value="calculate" id="calc" />
+	<label for="depth">Depth (inches)</label><br />
+	<input type="text" name="depth" id="depth" /><br />
+
+	<input type="button" value="calculate" id="calc" />
 </form>
 
-
 <div id="volume"></div>
-<!--<div id="cost"></div>-->
 
 </body>
 </html>
