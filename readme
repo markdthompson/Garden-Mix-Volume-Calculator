@@ -1,3 +1,26 @@
+Volume Calculator Badge
+
+Description:
+
+A configurable badge you can use to calculate the volume of a space in cubic feet.
+
+Demo
+http://www.mediamesis.net/badges/volume_calc/demo.html
+
+Using it:
+
+The badge is available as a hosted file at http://www.mediamesis.net/badges/volume_calc/volume_calc.min.js and is configurable by including json within the linking script tag.
+
+For example, if you'd like the badge to appear in your right column. Simply add the following tag within your right column div or section:
+
+<pre>
+&lt;script src="http://www.mediamesis.net/badges/volume_calc/volume_calc.min.js"&gt;
+	{"font":"Arial","width":"160px","padding":"40px 40px","margin":"10px 20px","bgcolor":"#efefef"}
+&lt;/script&gt;
+</pre>
+
+The script tag accepts font, width, margin, padding & background color paramets in standard CSS form, and the length, width & depth fields are used for calculating volume.
+
 Contact:
 
 Smith & Thompson, Inc.
@@ -5,8 +28,3 @@ http://www.smithandthompson.net
 
 Author:
 mark@smithandthompson.net
-
-Description:
-
-A simple javascript & html5 volume calculator we made to figure out how much garden soil we needed for the 
-New Hope Solebury Edible Schoolyard project. Needs cleaning up - could be made into a widget.
