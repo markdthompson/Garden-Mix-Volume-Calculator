@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	
-	<title>Volume Calculator Badge Demo</title>
+	<title>Volume Calculator Widget Demo</title>
 	
 	<!-- meta tags -->
 	<meta name="keywords" content="gardening, garden, mix, dirt, mulch, volume, calculator">
-	<meta name="description" content="Demo page for Smith & Thompson's Garden Mix Volume Calculator Badge">
+	<meta name="description" content="Demo page for Smith & Thompson's Garden Mix Volume Calculator Widget">
 
 	<!-- styles -->
 	<style>
@@ -15,6 +15,7 @@
 		#content {width:900px; margin: 10px auto 10px auto; background-color: #eee;}
 		#left_col {width:570px; margin: 10px 5px 10px 10px; padding: 10px; background-color: #ddd; float:left; }
 		#right_col {width:280px; margin: 10px 10px 10px 5px; background-color: #eee; float:right; }
+		#donate {margin-top:30px; text-align:center;}
 		#footer {text-align: right; width: 900px; margin: 20px auto; background-color: #eee; height:50px;}
 		#footer p {padding: 10px 10px 0 0; margin: 0;}
 		.clear {clear: both;}
@@ -27,33 +28,34 @@
 </head>
 <body>
 	<header id="main">
-		<h1>Volume Calculator Badge Demo</h1>
+		<h1>Volume Calculator Widget Demo</h1>
 	</header>
 	<section id="content">
 		
 		<section id="left_col">
 			<header>
-				<h1>Volume Calculator Badge</h1>
+				<h1>Volume Calculator Widget</h1>
 			</header>
 			
 			<section>
 				<h2>Description:</h2>
-				<p>A configurable badge you can use to calculate the volume of a space in cubic feet.</p>
+				<p>A configurable widget you can use to calculate the volume of a space in cubic feet. We originally made it to calculate how much garden mix we needed for the raised beds for our Edible Schoolyard project.</p>
 			</section>
 			
 			<section>
 				<h2>Demo:</h2>
-				<p><a href="http://www.mediamesis.net/badges/volume_calc/demo.html" title="see a demo">http://www.mediamesis.net/badges/volume_calc/demo.html</a></p>
+				<p><a href="http://www.mediamesis.net/widgets/volume_calc/demo.html" title="see a demo">http://www.mediamesis.net/widgets/volume_calc/demo.html</a></p>
 			</section>
 			
 			<section>
 				<h2>Using it:</h2>
-				<p>The badge is available as a hosted file at http://www.mediamesis.net/badges/volume_calc.min.js and is configurable by including json within the linking script tag.</p>
-				<p>For example, if you'd like the badge to appear in your right column. Simply add the following tag within your right column div or section:</p>
+				<p>The widget is available as a hosted file at http://www.mediamesis.net/widgets/volume_calc.min.js and is configurable by including json within the linking script tag.</p>
+				<p>For example, if you'd like the widget to appear in your right column. Simply add the following tag within your right column div or section:</p>
 <code>
-&lt;script src="http://www.mediamesis.net/badges/volume_calc.min.js"&gt;
+&lt;script src="http://www.mediamesis.net/widgets/volume_calc.min.js"&gt;
 	<br />
 	{<br />
+	"title":"Garden Mix Calculator",<br />
 	"font":"Arial",<br />
 	"width":"160px",<br />
 	"padding":"40px 40px",<br />
@@ -62,7 +64,7 @@
 	}<br />
 &lt;/script&gt;
 </code>
-				<p>The script tag accepts font, width, margin, padding & background color paramets in standard CSS form, and the length, width & depth fields are used for calculating volume.</p>
+				<p>The script tag accepts title, font, width, margin, padding & background color parameters in standard CSS form, and the length, width & depth fields are used for calculating volume.</p>
 			</section>
 			
 			<section>
@@ -80,7 +82,15 @@
 		</section>
 		
 		<section id="right_col">
-			<script src="http://www.mediamesis.net/badges/volume_calc.min.js">{"font":"Arial","width":"160px","padding":"40px 40px","margin":"10px 20px","bgcolor":"#fce386"}</script>
+			<script src="http://www.mediamesis.net/widgets/volume_calc.min.js">{"font":"Arial","width":"160px","padding":"40px 40px","margin":"10px 20px","bgcolor":"#fce386"}</script>
+			<div id="donate">
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="VQR86LRB7XAJQ">
+				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+			</div>
 		</section>
 		
 		<section class="clear"></section>

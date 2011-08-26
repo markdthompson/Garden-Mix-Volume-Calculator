@@ -11,6 +11,12 @@
 *
 * Smith & Thompson, Inc.
 * http://www.smithandthompson.net
+* 
+* Thanks to: 
+*	Kent Brewster for his clear and inspiring examples <http://kentbrewster.com/case-hardened-javascript/>
+* 	Eric Miraglia for the Javascript Module Pattern <http://yuiblog.com/blog/2007/06/12/module-pattern/>
+* 	Dustin Diaz for the excellent JSON article <http://www.dustindiaz.com/json-for-the-masses/>
+*	and James Edwards for his generic onload pattern <http://www.brothercake.com/site/resources/scripts/onload/>	
 *
 **/
 
@@ -49,6 +55,24 @@
 							
 							// set defaults & assign params where set
 							
+							// title
+							$.w.title = "Garden Mix Calculator";
+							if( typeof $.a.title == "string"){
+								$.w.title = $.a.title;
+							}
+							
+							// set the title
+							$.w.td = document.createElement('DIV');
+							$.w.td.style.textAlign = "left";
+							$.w.appendChild($.w.td);
+							$.w.td.t = document.createElement('H1');
+							$.w.td.t.appendChild(document.createTextNode($.w.title));
+							$.w.td.t.style.fontSize = "15px";
+							$.w.td.t.style.fontWeight = "bold";
+							$.w.td.t.style.margin = "0 0 15px 0";
+							$.w.td.t.style.padding = "0";
+							$.w.td.appendChild($.w.td.t);
+							
 							// font
 							$.w.style.fontFamily = "Arial, Helvetica, sans-serif";
 							if( typeof $.a.font == "string"){
@@ -78,7 +102,6 @@
 							if( typeof $.a.bgcolor == "string"){
 								$.w.style.backgroundColor = $.a.bgcolor;
 							}
-							
 							
 							$.w.labelVals = new Array('length','width','depth');
 							$.w.labels = new Array();
@@ -123,6 +146,18 @@
 							$.w.r.setAttribute("id", randName+"_result");
 							$.w.r.style.height = "20px";
 							$.w.appendChild($.w.r);
+
+							// set the copyright & linkback
+							$.w.cd = document.createElement('DIV');
+							$.w.cd.style.textAlign = "left";
+							$.w.appendChild($.w.cd);
+							$.w.cd.c = document.createElement('A');
+							$.w.cd.c.setAttribute("href", "http://www.mediamesis.net/widgets/volume_calc/demo.html");
+							$.w.cd.c.appendChild(document.createTextNode("Widget by S & T, 2011"));
+							$.w.cd.c.style.fontSize = "9px";
+							$.w.cd.c.style.margin = "15px 0 0 0";
+							$.w.cd.c.style.padding = "0";
+							$.w.cd.appendChild($.w.cd.c);
 							
 							// set & clear script
 							theScripts[i].parentNode.insertBefore($.w, theScripts[i]);
@@ -172,14 +207,12 @@
 			};
 	}();
 	
-	var thisScript = /volume_calc.min.js/;
+	var thisScript = /volume_calc.js/;
 	
-	//setup onload function
 	if(typeof window.addEventListener != 'undefined') {
-		//.. gecko, safari, konqueror and standard
 		window.addEventListener('load', $.f.init(thisScript), false);
 	} else if(typeof document.addEventListener != 'undefined') {
-		//.. opera 
+		// opera 
 		document.addEventListener('load', $.f.init(thisScript), false);
 	} else if(typeof window.attachEvent != 'undefined') {
 		//.. win/ie
