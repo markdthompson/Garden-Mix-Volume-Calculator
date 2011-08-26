@@ -1,9 +1,9 @@
 /**
 *
 * volume_calc.js
-* a configurable badge you can use to calculate the volume of a space in cubic feet
+* a configurable widget you can use to calculate the volume of a space in cubic feet
 *
-* @inputs script tag accepts font, width, margin, padding & background color parameters in standard CSS form, 
+* @inputs script tag accepts title, font, width, margin, padding & background color parameters in standard CSS form, 
 * length, width & depth fields are used for calculating volume
 *
 * @author Mark Thompson <mark@smithandthompson.net>
