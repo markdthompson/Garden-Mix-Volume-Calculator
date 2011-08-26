@@ -13,11 +13,11 @@ The badge is available as a hosted file at http://www.mediamesis.net/badges/volu
 
 For example, if you'd like the badge to appear in your right column. Simply add the following tag within your right column div or section:
 
-<pre>
-&lt;script src="http://www.mediamesis.net/badges/volume_calc.min.js"&gt;
+
+<script src="http://www.mediamesis.net/badges/volume_calc.min.js">
 	{"font":"Arial","width":"160px","padding":"40px 40px","margin":"10px 20px","bgcolor":"#efefef"}
-&lt;/script&gt;
-</pre>
+</script>
+
 
 The script tag accepts font, width, margin, padding & background color paramets in standard CSS form, and the length, width & depth fields are used for calculating volume.
 
