@@ -14,7 +14,7 @@ The badge is available as a hosted file at http://www.mediamesis.net/badges/volu
 For example, if you'd like the badge to appear in your right column. Simply add the following tag within your right column div or section:
 
 
-<script src="http://www.mediamesis.net/badges/volume_calc.min.js">
+<script src='http://www.mediamesis.net/badges/volume_calc.min.js'>
 	{"font":"Arial","width":"160px","padding":"40px 40px","margin":"10px 20px","bgcolor":"#efefef"}
 </script>
 
