@@ -150,12 +150,12 @@
 							// set the copyright & linkback
 							$.w.cd = document.createElement('DIV');
 							$.w.cd.style.textAlign = "left";
+							$.w.cd.style.margin = "15px 0 0 0";
 							$.w.appendChild($.w.cd);
 							$.w.cd.c = document.createElement('A');
 							$.w.cd.c.setAttribute("href", "http://www.mediamesis.net/widgets/volume_calc/demo.html");
 							$.w.cd.c.appendChild(document.createTextNode("Widget by S & T, 2011"));
 							$.w.cd.c.style.fontSize = "9px";
-							$.w.cd.c.style.margin = "15px 0 0 0";
 							$.w.cd.c.style.padding = "0";
 							$.w.cd.appendChild($.w.cd.c);
 							

@@ -1,4 +1,4 @@
-Volume Calculator Badge
+Volume Calculator Widget
 
 Description:
 
@@ -9,9 +9,9 @@ http://www.mediamesis.net/widgets/volume_calc/demo.html
 
 Using it:
 
-The badge is available as a hosted file at http://www.mediamesis.net/widgets/volume_calc.min.js and is configurable by including json within the linking script tag.
+The widget is available as a hosted file at http://www.mediamesis.net/widgets/volume_calc.min.js and is configurable by including json within the linking script tag.
 
-For example, if you'd like the badge to appear in your right column. Simply add the following tag within your right column div or section:
+For example, if you'd like the widget to appear in your right column. Simply add the following tag within your right column div or section:
 
 
 <script src='http://www.mediamesis.net/widgets/volume_calc.min.js'>
